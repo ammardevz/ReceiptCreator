@@ -1,6 +1,12 @@
 # Receipt Creator
 The ReceiptCreator class is a utility class that allows you to generate formatted receipts based on a set of items and customer information. It provides methods for generating a receipt string and formatting the date.
 
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
 ## Example 1: Creating a Basic Receipt
 ```java
 ReceiptCreator<Item> receiptCreator = ReceiptCreator.<Item>builder()
