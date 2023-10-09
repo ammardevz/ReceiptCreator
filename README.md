@@ -6,17 +6,6 @@ The ReceiptCreator class is a utility class that allows you to generate formatte
 
 [MIT](https://github.com/ammardevz/ReceiptCreator/blob/master/LICENSE)
 
-## Dependecy
-```xml
-    <dependencies>
-        <dependency>
-            <groupId>com.github.ammardevz</groupId>
-            <artifactId>receiptcreator</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-    </dependencies>
-```
-
 ## Usage
 
 The ReceiptCreator library provides a straightforward and efficient way to generate receipts programmatically. It operates by following a logical flow that encompasses configuration, item management, customization, calculation, output formatting, error handling, and integration. Here's a more detailed explanation of how ReceiptCreator works:
@@ -36,6 +25,17 @@ The ReceiptCreator library provides a straightforward and efficient way to gener
 - Integration: ReceiptCreator is designed to be easily integrated into your application workflow. You can incorporate it into your transactional processes, invoicing systems, or point-of-sale (POS) systems to automatically generate receipts after successful transactions. This integration streamlines your business operations and enables efficient receipt generation. By seamlessly integrating ReceiptCreator, you can automate the receipt generation process and improve the overall efficiency of your business workflows.
 
 By following this logical flow, ReceiptCreator simplifies the process of generating receipts programmatically. It abstracts the complexities of receipt formatting, calculations, and customization, allowing developers to focus on the core functionality of their applications while delivering professional and accurate receipts to end-users.
+
+### Dependecy
+```xml
+    <dependencies>
+        <dependency>
+            <groupId>com.github.ammardevz</groupId>
+            <artifactId>receiptcreator</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+```
 
 
 ## Example 1: Creating a Basic Receipt
