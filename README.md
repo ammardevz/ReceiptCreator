@@ -12,21 +12,70 @@ The `ReceiptCreator` class is a Java class that generates a receipt string based
 
 **Example:**
 ```java
-// Create an instance of ReceiptCreator
-ReceiptCreator<Item> receiptCreator = ReceiptCreator.<Item>builder()
-    .items(items)
-    .propertyExtractor(item -> {
-        // Define the property extractor logic
-        // ...
-    })
-    .customerName("John Doe")
-    .customerAddress("123 Main St")
-    .cashierName("Jane Smith")
-    .receiptNumber(1)
-    .storeName("My Store")
-    .storeAddress("456 Elm St")
-    .build();
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
-// Generate the receipt string
-String receiptString = receiptCreator.generateReceiptString();
-System.out.println(receiptString);
+public class Main {
+    public static void main(String[] args) {
+        // Create a list of items
+        List<Item> items = new ArrayList<>();
+        items.add(new Item("Item 1", 2, 10.99f));
+        items.add(new Item("Item 2", 1, 5.99f));
+        items.add(new Item("Item 3", 3, 7.99f));
+
+        // Create an instance of ReceiptCreator
+        ReceiptCreator<Item> receiptCreator = ReceiptCreator.<Item>builder()
+                .items(items)
+                .propertyExtractor(item -> {
+                    // Define the property extractor logic
+                    String itemName = item.getName();
+                    int itemQuantity = item.getQuantity();
+                    float itemPrice = item.getPrice();
+
+                    // Create a map to hold the extracted properties
+                    Map<String, String> properties = Map.of(
+                            "Item Name", itemName,
+                            "Quantity", String.valueOf(itemQuantity),
+                            "Price", String.valueOf(itemPrice)
+                    );
+
+                    return properties;
+                })
+                .customerName("John Doe")
+                .customerAddress("123 Main St")
+                .cashierName("Jane Smith")
+                .receiptNumber(1)
+                .storeName("My Store")
+                .storeAddress("456 Elm St")
+                .build();
+
+        // Generate the receipt string
+        String receiptString = receiptCreator.generateReceiptString();
+        System.out.println(receiptString);
+    }
+}
+
+class Item {
+    private String name;
+    private int quantity;
+    private float price;
+
+    public Item(String name, int quantity, float price) {
+        this.name = name;
+        this.quantity = quantity;
+        this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+}
