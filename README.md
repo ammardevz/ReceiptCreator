@@ -1,4 +1,5 @@
 # Receipt Creator
+<img src="https://i.imgur.com/YXzpAkk.jpg" alt="Alt text" width="200" style="display: block; margin: auto;">
 The ReceiptCreator class is a utility class that allows you to generate formatted receipts based on a set of items and customer information. It provides methods for generating a receipt string and formatting the date.
 
 
