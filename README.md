@@ -4,8 +4,12 @@ The ReceiptCreator class is a utility class that allows you to generate formatte
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/ammardevz/ReceiptCreator/blob/master/LICENSE)
 
+
+## Authors
+
+- [@ammardevz](https://www.github.com/ammardevz)
 
 ## Example 1: Creating a Basic Receipt
 ```java
