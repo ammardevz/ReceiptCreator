@@ -6,6 +6,17 @@ The ReceiptCreator class is a utility class that allows you to generate formatte
 
 [MIT](https://github.com/ammardevz/ReceiptCreator/blob/master/LICENSE)
 
+## Dependecy
+```xml
+    <dependencies>
+        <dependency>
+            <groupId>com.github.ammardevz</groupId>
+            <artifactId>receiptcreator</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+```
+
 ## Usage
 
 The ReceiptCreator library provides a straightforward and efficient way to generate receipts programmatically. It operates by following a logical flow that encompasses configuration, item management, customization, calculation, output formatting, error handling, and integration. Here's a more detailed explanation of how ReceiptCreator works:
