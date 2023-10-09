@@ -159,5 +159,5 @@ Thank you for your business!               Have a great day!
 
 ## Authors
 
-- [@ammardevz](https://www.github.com/ammardevz)
+- [ammardev](https://www.github.com/ammardevz)
 
