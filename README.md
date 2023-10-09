@@ -45,9 +45,48 @@ dependencies {
 ```
 
 
-### Example 1: Creating a Basic Receipt
+### Example 1:
+```java
+        Function<Item, Map<String, Object>> propertyExtractor = item -> {
+            Map<String, Object> properties = new HashMap<>();
+            properties.put("name", item.getName());
+            properties.put("quantity", item.getQuantity());
+            properties.put("price", item.getPrice());
+            return properties;
+        };
+
+        List<Item> items = new ArrayList<>();
+        items.add(new Item("Item 1", 2, 10.0f));
+        items.add(new Item("Item 2", 1, 5.0f));
+
+        ReceiptCreator<Item> receiptCreator = ReceiptCreator.<Item>builder()
+                .items(items)
+                .propertyExtractor(propertyExtractor)
+                .customerName("John Doe")
+                .customerAddress("123 Main St")
+                .cashierName("Jane Smith")
+                .receiptNumber(1)
+                .storeName("ABC Store")
+                .storeAddress("456 Elm St")
+                .build();
+
+        String receiptString = receiptCreator.generateReceiptString();
+        System.out.println(receiptString);
+```
+### Example 2:
 ```java
 ReceiptCreator<Item> receiptCreator = ReceiptCreator.<Item>builder()
+        .items(Arrays.asList(
+                new Item("Item 1", 2, 10.0f),
+                new Item("Item 2", 1, 5.0f)
+        ))
+        .propertyExtractor(item -> {
+            Map<String, Object> properties = new HashMap<>();
+            properties.put("name", item.getName());
+            properties.put("quantity", item.getQuantity());
+            properties.put("price", item.getPrice());
+            return properties;
+        })
         .customerName("John Doe")
         .customerAddress("123 Main St")
         .cashierName("Jane Smith")
@@ -59,24 +98,8 @@ ReceiptCreator<Item> receiptCreator = ReceiptCreator.<Item>builder()
 String receiptString = receiptCreator.generateReceiptString();
 System.out.println(receiptString);
 ```
-### Example 2: Customizing Receipt Properties
-```java
-ReceiptCreator<Book> receiptCreator = ReceiptCreator.<Book>builder()
-        .customerName("Jane Doe")
-        .customerAddress("789 Oak St")
-        .cashierName("John Smith")
-        .receiptNumber(2)
-        .storeName("XYZ Bookstore")
-        .storeAddress("789 Maple Ave")
-        .storePhoneNumber("123-456-7890")
-        .discount(0.1f)
-        .build();
 
-String receiptString = receiptCreator.generateReceiptString();
-System.out.println(receiptString);
-```
-
-### Example 3: Handling Custom Item Objects
+### Example 3:
 ```java
 ReceiptCreator<Product> receiptCreator = ReceiptCreator.<Product>builder()
         .customerName("Alice Smith")
@@ -86,7 +109,13 @@ ReceiptCreator<Product> receiptCreator = ReceiptCreator.<Product>builder()
         .storeName("XYZ Store")
         .storeAddress("789 Oak St")
         .storePhoneNumber("987-654-3210")
-        .propertyExtractor(Product::toReceiptProperties)
+        .propertyExtractor(product -> {
+            Map<String, Object> properties = new HashMap<>();
+            properties.put("productName", product.getProductName());
+            properties.put("quantity", product.getQuantity());
+            properties.put("price", product.getPrice());
+            return properties;
+        })
         .items(Arrays.asList(
                 new Product("Product 1", 2, 9.99f),
                 new Product("Product 2", 3, 12.99f),
