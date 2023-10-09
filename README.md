@@ -38,7 +38,7 @@ By following this logical flow, ReceiptCreator simplifies the process of generat
 ```
 
 
-## Example 1: Creating a Basic Receipt
+### Example 1: Creating a Basic Receipt
 ```java
 ReceiptCreator<Item> receiptCreator = ReceiptCreator.<Item>builder()
         .customerName("John Doe")
@@ -77,7 +77,7 @@ Total:                              $138.90
 
 Thank you for your business!               Have a great day!
 ```
-## Example 2: Customizing Receipt Properties
+### Example 2: Customizing Receipt Properties
 ```java
 ReceiptCreator<Book> receiptCreator = ReceiptCreator.<Book>builder()
         .customerName("Jane Doe")
@@ -119,7 +119,7 @@ Total:                              $130.45
 Thank you for your business!               Have a great day!
 ```
 
-## Example 3: Handling Custom Item Objects
+### Example 3: Handling Custom Item Objects
 ```java
 ReceiptCreator<Product> receiptCreator = ReceiptCreator.<Product>builder()
         .customerName("Alice Smith")
