@@ -68,7 +68,6 @@ Thank you for your business!               Have a great day!
 ```
 ## Example 2: Customizing Receipt Properties
 ```java
-Copy
 ReceiptCreator<Book> receiptCreator = ReceiptCreator.<Book>builder()
         .customerName("Jane Doe")
         .customerAddress("789 Oak St")
@@ -86,8 +85,6 @@ System.out.println(receiptString);
 ```apache
 Output:
 
-apache
-Copy
 XYZ Bookstore
 789 Maple Ave
 123-456-7890
@@ -110,10 +107,9 @@ Total:                              $130.45
 
 Thank you for your business!               Have a great day!
 ```
+
+## Example 3: Handling Custom Item Objects
 ```java
-Example 3: Handling Custom Item Objects
-java
-Copy
 ReceiptCreator<Product> receiptCreator = ReceiptCreator.<Product>builder()
         .customerName("Alice Smith")
         .customerAddress("456 Pine St")
@@ -133,11 +129,10 @@ ReceiptCreator<Product> receiptCreator = ReceiptCreator.<Product>builder()
 String receiptString = receiptCreator.generateReceiptString();
 System.out.println(receiptString);
 ```
+
 ```apache
 Output:
 
-apache
-Copy
 XYZ Store
 789 Oak St
 987-654-3210
