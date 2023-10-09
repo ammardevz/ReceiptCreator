@@ -26,7 +26,7 @@ The ReceiptCreator library provides a straightforward and efficient way to gener
 
 By following this logical flow, ReceiptCreator simplifies the process of generating receipts programmatically. It abstracts the complexities of receipt formatting, calculations, and customization, allowing developers to focus on the core functionality of their applications while delivering professional and accurate receipts to end-users.
 
-### Dependecy
+### Dependency
 ```xml
     <dependencies>
         <dependency>
