@@ -1,4 +1,4 @@
-package io.github.ammardevz;
+package com.github.ammardevz;
 
 import lombok.*;
 

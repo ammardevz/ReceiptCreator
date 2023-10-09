@@ -1,4 +1,4 @@
-package io.github.ammardevz;
+package com.github.ammardevz;
 
 public class ReceiptGenerationException extends Exception {
     public ReceiptGenerationException(String message) {
