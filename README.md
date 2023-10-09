@@ -44,8 +44,6 @@ System.out.println(receiptString);
 ```apache
 Output:
 
-apache
-Copy
 ABC Store
 456 Elm St
 N/A
