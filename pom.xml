@@ -5,14 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.ammardevz</groupId>
-    <artifactId>RecieptCreator</artifactId>
+    <artifactId>ReceiptCreator</artifactId>
     <version>1.0.0</version>
 
     <distributionManagement>
         <repository>
             <id>github</id>
             <name>GitHub AMMAR-DEV Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/ammardevz/RecieptCreator</url>
+            <url>https://maven.pkg.github.com/ammardevz/ReceiptCreator</url>
         </repository>
     </distributionManagement>
 
